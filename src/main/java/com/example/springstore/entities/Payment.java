@@ -1,5 +1,6 @@
 package com.example.springstore.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.time.Instant;
@@ -14,6 +15,7 @@ public class Payment {
     private Instant moment;
     @OneToOne
     @MapsId
+    @JsonIgnore
     private Order order;
 
     public Payment() {
